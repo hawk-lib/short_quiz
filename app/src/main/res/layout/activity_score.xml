@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreActivity">
+
+    <TextView
+        android:id="@+id/scoreTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#00ff00"
+        app:layout_constraintBottom_toTopOf="@id/correctAnswersTV"
+        app:layout_constraintEnd_toEndOf="@+id/correctAnswersTV"
+        app:layout_constraintStart_toStartOf="@+id/correctAnswersTV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/correctAnswersTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/totalQuestionsTV"
+        app:layout_constraintEnd_toEndOf="@+id/totalQuestionsTV"
+        app:layout_constraintStart_toStartOf="@+id/totalQuestionsTV"
+        app:layout_constraintTop_toBottomOf="@id/scoreTV" />
+
+    <TextView
+        android:id="@+id/totalQuestionsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/backBT"
+        app:layout_constraintEnd_toEndOf="@+id/backBT"
+        app:layout_constraintStart_toStartOf="@+id/backBT"
+        app:layout_constraintTop_toBottomOf="@id/correctAnswersTV" />
+
+    <Button
+        android:id="@+id/backBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/try_again"
+        android:textAllCaps="false"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalQuestionsTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
